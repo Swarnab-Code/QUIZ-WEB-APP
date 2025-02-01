@@ -1,0 +1,138 @@
+.choice-container {
+	display: flex;
+	margin-bottom: 0.5rem;
+	width: 100%;
+	font-size: 1.8rem;
+	border: 0.1rem solid rgba(32, 211, 187, 0.25);
+	background-color: rgb(255, 255, 255);
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.choice-container:hover {
+	cursor: pointer;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0);
+	transform: scale(1.05);
+	transition: transform 150ms;
+}
+
+.choice-container.clicked {
+	transform: scale(0.95);
+	box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+.choice-prefix {
+	padding: 1.5rem 2.5rem;
+	background-color: #83e3cb;
+	color: white;
+}
+
+.choice-text {
+	padding: 1.5rem;
+	width: 100%;
+}
+
+.correct {
+	background-color: #44ff70;
+	animation: correctAnimation 0.5s ease-in-out;
+}
+
+.incorrect {
+	background-color: #ff4949;
+	animation: incorrectAnimation 0.5s ease-in-out;
+}
+
+/* HUD */
+#hud {
+	display: flex;
+	justify-content: space-between;
+}
+
+#hud-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+#timer {
+	font-size: 2.5rem;
+	color: #78acd9;
+}
+
+.hud-prefix {
+	text-align: center;
+	font-size: 2rem;
+}
+
+.hud-main-text {
+	text-align: center;
+}
+
+#progressBar {
+	width: 20rem;
+	height: 4rem;
+	border: 0.3rem solid #56a5eb;
+	margin-top: 1.5rem;
+}
+
+#progressBarFull {
+	height: 3.6rem;
+	background-color: #56a5eb;
+	width: 0%;
+}
+
+/* LOADER */
+#loader {
+	border: 1.6rem solid white;
+	border-radius: 50%;
+	border-top: 1.6rem solid #e7d42a;
+	width: 12rem;
+	height: 12rem;
+	animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes correctAnimation {
+	0% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(1.1);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+@keyframes incorrectAnimation {
+	0% {
+		transform: translateX(0);
+	}
+
+	25% {
+		transform: translateX(-5px);
+	}
+
+	50% {
+		transform: translateX(5px);
+	}
+
+	75% {
+		transform: translateX(-5px);
+	}
+
+	100% {
+		transform: translateX(0);
+	}
+}
