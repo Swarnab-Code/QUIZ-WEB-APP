@@ -33,5 +33,5 @@ const saveHighScore = (e) => {
 	localStorage.removeItem('longestStreak');
 	localStorage.removeItem('mostRecentScore');
 
-	window.location.assign('../html/index.html');
+	window.location.assign('../index.html');
 };
