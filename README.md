@@ -2,7 +2,7 @@
 
 _A feature-rich quiz application built using **HTML, CSS, and JavaScript** with a focus on smooth animations, sound effects, and leaderboard tracking._
 
-🔗 **Live Demo**: [Your Deployed Link Here](https://quizwebgame.netlify.app/)  
+🔗 **Live Demo**: [My Deployed Link Here](https://quizwebgame.netlify.app/)  
 🎥 **Video Demo**: [![Watch the demo](./assets/index%20page.png)](https://drive.google.com/file/d/11UBfDRtcecrR1BJOeGJI3Cxey22SXAnc/view?usp=drive_link)
 
 ---
