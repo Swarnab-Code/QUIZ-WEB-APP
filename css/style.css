@@ -21,7 +21,7 @@ h4 {
 h1 {
 	font-size: 5.4rem;
 	color: #579c51;
-	margin-bottom: 5rem;
+	margin-bottom: 4rem;
 }
 
 h1>span {
@@ -31,13 +31,13 @@ h1>span {
 
 h2 {
 	font-size: 4.2rem;
-	margin-bottom: 4rem;
+	margin-bottom: 3rem;
 	font-weight: 700;
 }
 
 h3 {
 	font-size: 2.8rem;
-	margin-bottom: 3rem;
+	margin-bottom: 2rem;
 	font-weight: 500;
 }
 

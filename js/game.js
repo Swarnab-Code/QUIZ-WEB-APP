@@ -44,7 +44,8 @@ fetch(
 		alert('Failed to load questions. Please try again later.');
 	});
 
-const CORRECT_BONUS = 10;
+const CORRECT_BONUS = 4;
+const NEGATIVE_MARKS = -1;
 const MAX_QUESTIONS = 10;
 
 const startGame = () => {
@@ -85,7 +86,7 @@ const getNewQuestion = () => {
 	availableQuestions.splice(questionIndex, 1);
 	acceptingAnswers = true;
 
-	startTimer(30);
+	startTimer(15);
 };
 
 const startTimer = (time) => {
@@ -116,6 +117,11 @@ choices.forEach((choice) => {
 		const isCorrect =
 			currentQuestion.options[selectedAnswer - 1].is_correct;
 
+		// ✅ Find the correct choice element
+		const correctChoice = choices.find(
+			(choice, idx) => currentQuestion.options[idx].is_correct
+		);
+
 		if (isCorrect) {
 			correctSound.play();
 			incrementScore(CORRECT_BONUS);
@@ -125,21 +131,25 @@ choices.forEach((choice) => {
 				longestStreak = streak;
 				localStorage.setItem('longestStreak', longestStreak);
 			}
+
+			selectedChoice.parentElement.classList.add('correct');
 		} else {
 			incorrectSound.play();
 			streak = 0;
+			incrementScore(NEGATIVE_MARKS);
+
+			selectedChoice.parentElement.classList.add('incorrect');
+			correctChoice.parentElement.classList.add('correct');
 		}
 
 		updateStreakUI();
 
-		selectedChoice.parentElement.classList.add(
-			isCorrect ? 'correct' : 'incorrect'
-		);
 		setTimeout(() => {
 			selectedChoice.parentElement.classList.remove(
 				'correct',
 				'incorrect'
 			);
+			correctChoice.parentElement.classList.remove('correct');
 			getNewQuestion();
 		}, 2000);
 	});

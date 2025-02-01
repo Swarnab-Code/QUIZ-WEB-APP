@@ -2,16 +2,15 @@
 
 _A feature-rich quiz application built using **HTML, CSS, and JavaScript** with a focus on smooth animations, sound effects, and leaderboard tracking._
 
-![Quiz App Screenshot](./assets/index%20page.png/800x400)
-
 🔗 **Live Demo**: [Your Deployed Link Here](#)  
-🎥 **Video Demo**: [[![Watch the demo](./assets/index%20page.png)](https://drive.google.com/file/d/1Exz1Xta3ncuTFjoghb-O2jRa5MTWeQG0/view?usp=drive_link)](#)
+🎥 **Video Demo**: [![Watch the demo](./assets/index%20page.png)](https://drive.google.com/file/d/11UBfDRtcecrR1BJOeGJI3Cxey22SXAnc/view?usp=drive_link)
 
 ---
 
 ## 🚀 Features
 
 ✅ **Multiple Choice Questions** with a countdown timer.  
+✅ **Show Correct Answer** while choosing incorrect option.  
 ✅ **Score & Longest Streak Tracking** (Stored in Local Storage).  
 ✅ **Leaderboard System** to save top scores.  
 ✅ **Sound Effects** for correct and incorrect answers.
@@ -94,17 +93,7 @@ Simply open `index.html` in any modern browser.
 ## 📡 API Integration
 
 The app fetches questions from a JSON API using `fetch()`.  
-**Example API Response:**
 
-```json
-[
-	{
-		"question": "What is the capital of France?",
-		"options": ["Berlin", "Madrid", "Paris", "Lisbon"],
-		"correctAnswer": "Paris"
-	}
-]
-```
 
 ### Replace API Endpoint in `game.js`
 
